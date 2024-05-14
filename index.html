@@ -1,0 +1,143 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Shopping App</title>  
+    <link rel="stylesheet" href="styles.css">
+</head>  
+<body>  
+    <header>  
+        <h1>Welcome to Vincent Shopping App</h1>  
+        <nav>  
+            <ul>  
+                <li><a href="#" onclick="showPage('createUserPage')">Create User</a></li>  
+                <li><a href="#" onclick="showPage('loginPage')">Login</a></li>   
+                <li><a href="#">About Us</a></li>  
+                <li><a href="#">Contact</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+    <div id="createUserPage" class="page">  
+        <!-- 创建用户页面 -->  
+        <h2>Create New User</h2>  
+        <input type="text" id="username" placeholder="Enter your English username">  
+        <input type="password" id="password" placeholder="Enter your numeric password">  
+        <button onclick="createUser()">Create User</button>  
+    </div>  
+    <div id="loginPage" class="page">  
+        <!-- 登录页面 -->  
+        <h2>Login</h2>  
+        <input type="text" id="loginUsername" placeholder="Enter your English username">  
+        <input type="password" id="loginPassword" placeholder="Enter your numeric password">  
+        <button onclick="login()">Login</button>  
+    </div>  
+    <div id="shoppingPage" class="page hidden">  
+        <!-- 购物页面 -->  
+<div class="shopping-page">  
+  <!-- Hero banner image -->  
+  <div class="hero-banner">  
+      <img src="A.jpg" alt="Shopping Page Hero Banner">  
+  </div>  
+
+  <div class="container">  
+    <h1>Resource Kits</h1>  
+    <!-- 产品表格示例 -->  
+    <div class="product">  
+        <div class="product-name">Course 1</div>  
+        <div class="product-info">  
+            <div class="quantity">quantity <span id="quantity1">0</span></div>  
+            <div class="price">unit price <span class="unit-price1">10</span></div>  
+            <div class="total">Subtotal <span id="subtotal1">0</span></div>  
+            <button onclick="addToCart(1)">Add</button>  
+        </div>  
+    </div>  
+    <!-- 如果有其他产品，继续添加产品表格 -->  
+    <div class="product">  
+        <div class="product-name">Course 2</div>  
+        <div class="product-info">  
+            <div class="quantity">quantity <span id="quantity2">0</span></div>  
+            <div class="price">unit price <span class="unit-price2">20</span></div>  
+            <div class="total">Subtotal <span id="subtotal2">0</span></div>  
+            <button onclick="addToCart(2)">Add</button>  
+        </div>  
+    </div>  
+    <div class="product">   
+        <div class="product-name">Course 3</div>  
+        <div class="product-info">  
+            <div class="quantity">quantity <span id="quantity3">0</span></div>  
+            <div class="price">unit price <span class="unit-price3">30</span></div>  
+            <div class="total">Subtotal <span id="subtotal3">0</span></div>  
+            <button onclick="addToCart(3)">Add</button>  
+        </div>  
+    </div>  
+    <div class="product">   
+        <div class="product-name">Course 4</div>  
+        <div class="product-info">  
+            <div class="quantity">quantity <span id="quantity4">0</span></div>  
+            <div class="price">unit price <span class="unit-price4">40</span></div>  
+            <div class="total">Subtotal <span id="subtotal4">0</span></div>  
+            <button onclick="addToCart(4)">Add</button>  
+        </div>  
+    </div>  
+    <div class="product">   
+        <div class="product-name">Course 5</div>  
+        <div class="product-info">  
+            <div class="quantity">quantity <span id="quantity5">0</span></div>  
+            <div class="price">unit price <span class="unit-price5">50</span></div>  
+            <div class="total">Subtotal <span id="subtotal5">0</span></div>  
+            <button onclick="addToCart(5)">Add</button>  
+        </div>  
+    </div>  
+    <!-- 购物车总结 -->  
+    <div class="cart-summary">  
+        <ul class="summary-list">  
+            <li class="summary-item">  
+                Course 1  
+                <span class="summary-quantity" id="summaryQuantity1">0</span> x  
+                <span class="unit-price" id="unitPrice1">$10</span>  
+                <button class="remove-button" onclick="removeFromCart(1)">Remove</button>  
+            </li>  
+            <li class="summary-item">  
+                Course 2  
+                <span class="summary-quantity" id="summaryQuantity2">0</span> x  
+                <span class="unit-price" id="unitPrice2">$20</span>  
+                <button class="remove-button" onclick="removeFromCart(2)">Remove</button>  
+            </li>  
+            <li class="summary-item">  
+                Course 3  
+                <span class="summary-quantity" id="summaryQuantity3">0</span> x  
+                <span class="unit-price" id="unitPrice3">$30</span>  
+                <button class="remove-button" onclick="removeFromCart(3)">Remove</button>  
+            </li>  
+            <li class="summary-item">  
+                Course 4  
+                <span class="summary-quantity" id="summaryQuantity4">0</span> x  
+                <span class="unit-price" id="unitPrice4">$40</span>  
+                <button class="remove-button" onclick="removeFromCart(4)">Remove</button>  
+            </li>  
+            <li class="summary-item">  
+                Course 5  
+                <span class="summary-quantity" id="summaryQuantity5">0</span> x  
+                <span class="unit-price" id="unitPrice5">$50</span>  
+                <button class="remove-button" onclick="removeFromCart(5)">Remove</button>  
+            </li>  
+            <li class="summary-item total">  
+                <span class="label">Total price:</span>  
+                <span class="total-price" id="total">0</span> <!-- 注意这里只包含一个span用于显示总价 -->  
+            </li>  
+        </ul>
+        <div class="buttons">  
+            <button onclick="checkout()">Checkout</button>  
+            <button onclick="clearCart()">Empty Cart</button>  
+        </div>  
+    </div>
+
+    <footer>  
+      <div class="footer-content">  
+      <p>&copy; 2024 Vincent Shopping App. All rights reserved.</p>  
+      <p>For assistance, please contact us at: <a href="2318251322@qq.com">2318251322@qq.com</a></p>    
+    </footer>  
+    <script src="script.js"></script>
+</body>  
+</html>

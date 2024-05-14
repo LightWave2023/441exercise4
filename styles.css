@@ -1,0 +1,153 @@
+body {  
+    font-family: Arial, sans-serif;  
+}  
+  
+/* Header styles */  
+header {  
+    background-color: lightyellow;  
+    color: blue;  
+    padding: 20px;  
+}  
+  
+/* Navigation styles */  
+nav ul {  
+    list-style-type: none;  
+    padding: 0; /* Explicitly setting padding to 0 is a good practice */  
+}  
+  
+nav ul li {  
+    display: inline;  
+    margin-right: 20px;  
+}  
+  
+/* Page styles */  
+.page {  
+    display: none;  
+    padding: 20px;  
+}  
+  
+/* Additional class for hiding elements */  
+.hidden {  
+    display: none;  
+}   
+
+.hero-banner {  
+    /* 添加Hero banner的样式 */  
+    width: 200px; /* 可以根据需求调整 */  
+    height: 200px; /* 根据图像尺寸和页面布局调整 */  
+    background-image: url('A.jpg'); /* 如果图像加载失败，可以使用背景图片作为备选 */  
+    background-size: cover; /* 确保图像覆盖整个容器 */  
+    background-position: center; /* 图像居中 */  
+    text-align: center; /* 如果需要在上面添加文本，使其居中 */  
+    position: relative; /* 如果需要在上面添加覆盖层或文本 */  
+}  
+
+/* 如果使用<img>标签，则可能需要这样的样式来确保图像正确显示 */  
+.hero-banner img {  
+    width: 200px; /* 使图像宽度与容器宽度相同 */  
+    height: auto; /* 保持图像的比例 */  
+}  
+.product { 
+    background-color: white; /* 浅灰色背景 */ 
+    display: inline-block;  
+    text-align: left;  
+    margin: 10px;  
+    margin-bottom: 10px; /* 添加下外边距 */
+    padding: 10px;  
+    border: 10px solid lightgray;  
+    width: 250px;  
+    vertical-align: top;  
+}  
+.product-info {  
+    margin-bottom: 10px;  
+}  
+.cart-summary {  
+    font-family: Arial, sans-serif;  
+    margin: 20px;  
+    padding: 20px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+  
+.summary-list {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+  
+.summary-item {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    margin-bottom: 10px;  
+}  
+  
+.summary-quantity, .unit-price {  
+    margin-right: 5px;  
+}  
+  
+.remove-button {  
+    background-color: #e74c3c;  
+    color: white;  
+    border: none;  
+    padding: 5px 10px;  
+    border-radius: 4px;  
+    cursor: pointer;  
+}  
+  
+.remove-button:hover {  
+    background-color: #c0392b;  
+}  
+  
+.total {  
+    font-weight: bold;  
+}  
+  
+.label {  
+    font-weight: bold;  
+    margin-right: 5px;  
+}  
+  
+.buttons {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-top: 10px;  
+}  
+  
+.buttons button {  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}  
+  
+.buttons button:first-child {  
+    background-color: #2ecc71;  
+    color: white;  
+}  
+  
+.buttons button:last-child {  
+    background-color: #e74c3c;  
+    color: white;  
+}  
+  
+.buttons button:hover {  
+    opacity: 0.8;  
+}
+  
+/* Footer styles */  
+footer {  
+    background-color: #333; /* Footer background color */  
+    color: #fff; /* Text color */  
+    padding: 20px; /* Padding */  
+    text-align: center; /* Text alignment */  
+  }  
+    
+  footer a {  
+    color: #fff; /* Link color */  
+    text-decoration: none; /* Remove underline from links */  
+  }  
+    
+  footer a:hover {  
+    color: #ccc; /* Link color on hover */  
+    text-decoration: underline; /* Show underline on hover */  
+  }  
